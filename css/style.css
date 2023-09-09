@@ -1,9 +1,16 @@
-*{
-    margin: 0;
-    
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Rubik:ital,wght@0,300;1,300&display=swap");
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
 }
 
-
-body{
-    background-color: rgb(21, 67, 108);
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
+
+/*# sourceMappingURL=style.css.map */

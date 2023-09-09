@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Rubik:ital,wght@0,300;1,300&display=swap');
+
+
+//Colores de las letras o sombras 
+$pink : #ff29ad;
+$letraColor1:Black;
+$letraColor2:White;
+
+//Colores del fondo 
+$black:black;
+$black2:black;
+$white:White;
+$white2:White;
+
+
+//Colores Gradiantes
+$gradiante1: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+
+$font1: 'Cormorant Garamond', serif;
+$font2: 'Raleway', sans-serif;
+$font3: 'Rubik', sans-serif;
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: $black2;
+}
