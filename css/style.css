@@ -177,7 +177,7 @@ body {
 }
 
 .black {
-  background-image: url("/assert/img/11112.jpg");
+  background-image: url("../assert/img/11112.jpg");
   background-size: auto;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@ body {
 }
 
 .white {
-  background-image: url("/assert/img/11112.jpg");
+  background-image: url("../assert/img/11112.jpg");
   background-size: auto;
   background-attachment: fixed;
   background-repeat: no-repeat;
