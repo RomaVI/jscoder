@@ -21,6 +21,8 @@ $font3: 'Rubik', sans-serif;
 *:before,
 *::after {
     box-sizing: border-box;
+   
+    
 }
 
 
@@ -29,8 +31,9 @@ body {
     font-size: 16px;
     margin: 0;
     padding:0;
-
+    width: 100vw;
     min-height: 110vh;
-
+    box-sizing: border-box;
+    overflow:hidden ;
 }
 

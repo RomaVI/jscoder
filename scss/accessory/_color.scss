@@ -1,8 +1,52 @@
 .black{
-    background-color: $gris;
+    background-image: url("/assert/img/11112.jpg");
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: $white;
     .cont-head{
         background-color: rgb(36, 34, 34);
+        position: relative;
+        z-index: 999999;
+        display: flex;
+        header{
+        
+            h1{
+                color: $white;
+                    &:hover{
+                        transform: translateX(5px);
+                        text-shadow: 0px 0px 2px $red;
+                    }
+            }
+    
+            .boton{
+                .boton2{
+                    background-color: black;
+                    
+                    border: 2px solid $gris;
+                    &:hover{
+                        box-shadow: 0px 0px 10px $red;
+                    }
+                }  
+                .boton1{
+                    background-color: $white;
+                    border: 2px solid $black;
+                    &:hover{
+                        box-shadow: 0px 0px 10px $red;
+                    }
+                }    
+            }
+        }
+    }
+}
+.white{
+    background-image: url("/assert/img/11112.jpg");
+    background-size: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: $white;
+    .cont-head{
+        background-color: rgb(177, 177, 177);
         position: relative;
         z-index: 999999;
         display: flex;

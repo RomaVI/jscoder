@@ -5,10 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 200px;
     height: 200px;
     bottom:  -200px;
 }
-.cont-block-dow .active{
+.cont-block-dow.active{
     margin-left: 0;
 }

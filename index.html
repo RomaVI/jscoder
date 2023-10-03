@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="(prefers-color-sheme: light)" href="css/dark.css">
     <link rel="stylesheet" media="(prefers-color-sheme: dark)" href="css/light.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id="theme-stylesheet" rel="stylesheet" href="main-light.css">
-    <title>JsPag1</title>
+    <title>El Rincón</title>
 </head>
 
 <body class="black">
     <!--El archivo scss no esta en gitignore para que sea mas facil de examinar-->
-    <!--Contiene el sitch de cambio de color y el titulo  -->
+    <!--Todabia no funciona con media@ por ahora  -->
     <div class="cont-head">
         <header>
             <div class="head-text">
@@ -30,34 +36,37 @@
         </header>
     </div>
     <div class="cont-block-iz">
-        <div class="cerrar">cerrar</div>
         <ul class="iz-ul">
             <li>Buscador</li>
             <li>Biblioteca</li>
-            <li>Faboritos</li>
+            <li>Favoritos</li>
             <li>Contacto</li>
         </ul>
+        <div class="cerrar"><i class="fa-solid fa-arrows-down-to-line"></i></div>
     </div>
-    <div class="cont-block-dr">
-        <main class="cont-main"> 
-            <div class="block-top7">
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
-                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+    <div class="cont-block-dr bordes">
+        <div class="presentacion">
+            <div class="contenidoTxt">
+                <p>El Rincón</p>
             </div>
+        </div>
+        <main class="cont-main">
+            <div class="text-top7">Lo mejor de lo mejor</div>
+            <div class="block-top7" id="listLibros"></div>
         </main>
     </div>
+    </main>
+    </div>
+
     <div class="cont-block-dow">
         <footer>
             <p>links e informacion de contacto...</p>
         </footer>
     </div>
-
-    <script src="./js/main.js""> </script>
+    <script src="./js/libros.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/MenuyTema.js"></script>
+    <!--<script src="./js/main.js""> </script> esta la entrega 2-->
 </body>
 
 </html>

@@ -1,39 +1,71 @@
- .cont-block-iz{
-        background-color: rgb(71, 68, 74);
+.cont-block-iz {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    width: 170px;
+    height: calc(100vh);
+    margin-top: -30px;
+    position: fixed;
+
+    gap: 50px;
+    z-index: 10;
+    transition: transform 2s ease;
+    background-image: url("/assert/img/fondoVerde8.png");
+    background-size: 50px 100vh;
+    background-repeat: no-repeat;
+    background-color: rgba(111, 105, 105, 0.264);
+    .cerrar {
+        width: 40px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 140px;
+        background-color: rgba(111, 105, 105, 0.264);
+
+        cursor: pointer;
+        border-left: 2px solid rgb(59, 57, 57);
+        border-right: 2px solid rgb(59, 57, 57);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 10px;
+        
+        &:hover {
+            border-left: 2px solid aquamarine;
+            border-right: 2px solid aquamarine;
+            color: aquamarine;
+        }
+
+        i {
+            transition: transform .4s ease;
+            transform: rotate(90deg);
+        }
+        
+    }
+
+    .iz-ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 200px;
-        height: calc(100vh);
-        margin-top: -30px;
-        position: fixed;
 
-        z-index: 0;
-        .cerrar{
-            bottom: 20px;
-            left: 20px;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            position: absolute;
+        list-style: none;
+        gap: 40px;
+        
+        li {
             cursor: pointer;
-            font-size: 20px;
-        }
-        .iz-ul{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-            list-style: none;
-            gap: 40px;
-            li{
-                cursor: pointer;
-                &:hover{
-                    color: aquamarine;
-                }
+            text-shadow:  0px 0px 5px black, 0px 0px 5px aquamarine;
+            &:hover {
+                color: aquamarine;
             }
         }
     }
-    .cont-block-iz .active {
-        display: none;
-    }
+}
+.cont-block-iz.active{
+        transform: translateX(-150px) ;
+        transition: transform 1s ease;
+        .cerrar{
+            i {
+                transform: rotate(270deg);
+                transition: transform 0.4s ease;
+            }
+        }
+}

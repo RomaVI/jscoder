@@ -1,36 +1,93 @@
 .cont-block-dr {
-    margin-left: 200px;
-    min-height: 70vh;
+    min-height: 100vh;
+    width: calc(100vw - 10px);
 
-    background-color: rgb(47, 102, 88);
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    margin-left: 0px;
+    .presentacion {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1vh;
+        .contenidoTxt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0vh;
+            width: 50vw;
+            height: 10vh;
+            font-family: 'Fuggles', cursive;
+            font-size:12vh;
+            text-shadow: 0 0 20px $black, 0 0 10px $black, 0 0 30px $black;
+        }
+    }
     .cont-main {
         display: flex;
         flex-direction: column;
-
-        .block-top7 {
+        padding-left: 50px;
+        padding-right: 50px;
+        .text-top7{
             display: flex;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow:  0px 0px 5px black, 0px 0px 5px aquamarine;
+            margin-top: -20vh;
+            text-decoration: underline;
+            font-size: 3vh;
+        }
+        .block-top7 {
+            
+            display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
-            background-color: red;
+            justify-content: center;
+            align-items: center;
 
-            height: 180px;
+            height: 20vh;
             justify-content: center;
             align-items: center;
 
             margin-top: 50px;
+            margin-bottom: 50px;
             gap: 2vw;
-            .top7-cont{
+            .top7-cont {
                 display: flex;
                 flex-direction: row;
-                width: 120px;
-                height: 180px;
-                background-color: rgb(150, 83, 83);
+                min-width: 120px;
+                min-height: 200px;
+                width: 8.5vw;
+                height: 25vh;
+                margin-bottom: 50px;
+                display: flex;
+                justify-content: end;
+                overflow: hidden;
+                box-shadow: 5px 10px 10px black ;
+                
+                .corazon{
+                    position: absolute;
+                    color: rgb(0, 255, 13); /* Cambia el color a rojo en hover */
+                    font-size: 3vh;
+                    width: 2.3vw;
+                    transition: 1s ease-in-out;
+                }
+                
+                .noMeGusta{
+                    position: absolute;
+                    margin-top: 70px;
+                    color: red; /* Cambia el color a rojo en hover */
+                    font-size: 4vh;
+                    width: 2.3vw;
+                    transition: 1s ease-in-out;
+                    
+                   
+                }
                 
             }
+            
         }
     }
 }
 
-.cont-block-dr .active{
-    margin-left: 0;
-}
