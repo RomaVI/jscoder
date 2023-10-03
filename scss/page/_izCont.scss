@@ -1,0 +1,39 @@
+ .cont-block-iz{
+        background-color: rgb(71, 68, 74);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: calc(100vh);
+        margin-top: -30px;
+        position: fixed;
+
+        z-index: 0;
+        .cerrar{
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            position: absolute;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .iz-ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            list-style: none;
+            gap: 40px;
+            li{
+                cursor: pointer;
+                &:hover{
+                    color: aquamarine;
+                }
+            }
+        }
+    }
+    .cont-block-iz .active {
+        display: none;
+    }

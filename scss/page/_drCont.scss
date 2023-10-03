@@ -1,0 +1,36 @@
+.cont-block-dr {
+    margin-left: 200px;
+    min-height: 70vh;
+
+    background-color: rgb(47, 102, 88);
+
+    .cont-main {
+        display: flex;
+        flex-direction: column;
+
+        .block-top7 {
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+
+            height: 180px;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 50px;
+            gap: 2vw;
+            .top7-cont{
+                display: flex;
+                flex-direction: row;
+                width: 120px;
+                height: 180px;
+                background-color: rgb(150, 83, 83);
+                
+            }
+        }
+    }
+}
+
+.cont-block-dr .active{
+    margin-left: 0;
+}

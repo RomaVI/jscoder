@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JsPag1
-    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="(prefers-color-sheme: light)" href="css/dark.css">
+    <link rel="stylesheet" media="(prefers-color-sheme: dark)" href="css/light.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="main-light.css">
+    <title>JsPag1</title>
 </head>
 
-<body>
+<body class="black">
+    <!--El archivo scss no esta en gitignore para que sea mas facil de examinar-->
     <!--Contiene el sitch de cambio de color y el titulo  -->
     <div class="cont-head">
-        <head>
-            <div>
+        <header>
+            <div class="head-text">
                 <h1>
-                    <title>hola</title>
+                    Index
                 </h1>
             </div>
-            <div>
-                <button><p>Blanco</p></button>
-                <button><p>Negro</p></button>
+            <div class="head-boton">
+                <ul class="boton">
+                    <li class="boton1" id="light-theme-btn"></li>
+                    <li class="boton2" id="dark-theme-btn"></li>
+                </ul>
             </div>
-        </head>
+        </header>
     </div>
     <div class="cont-block-iz">
-        <ul>
-            <li><a href="part1"></a></li>
-            <li><a href="part2"></a></li>
-            <li><a href="part3"></a></li>
-            <li><a href="part4"></a></li>
+        <div class="cerrar">cerrar</div>
+        <ul class="iz-ul">
+            <li>Buscador</li>
+            <li>Biblioteca</li>
+            <li>Faboritos</li>
+            <li>Contacto</li>
         </ul>
     </div>
     <div class="cont-block-dr">
         <main class="cont-main"> 
-
+            <div class="block-top7">
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+                <div class="top7-cont"><img src="#" alt="img"><p>corazon</p></div>
+            </div>
         </main>
     </div>
     <div class="cont-block-dow">
@@ -42,8 +57,7 @@
         </footer>
     </div>
 
-
-    <script src="/js/mains.js"> </script>
+    <script src="./js/main.js""> </script>
 </body>
 
 </html>

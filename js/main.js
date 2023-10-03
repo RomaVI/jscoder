@@ -1,81 +1,113 @@
-// Algoritmo con un condicional "?"" 
-alert("2 ej sin preguntas ");
-let precio = 100;
-let descuento = precio > 50 ? 10 : 0; // Uso de operador ternario, es mas corto con ? 
-let precio_final_condicional = precio - descuento;
-
-console.log("Precio final con condicional:", precio_final_condicional); // sin prompt
-
-// Algoritmo para calcular valor final con impuestos y descuentos
-let precio_inicial = 200;
-let impuestos = 0.15;
-let descuento_valor = 20;
-
-let precio_con_impuestos = precio_inicial * (1 + impuestos);
-let precio_final_descuento = precio_con_impuestos - descuento_valor;
-console.log("Precio final con descuento:", precio_final_descuento);
-
-
-// Algoritmo utilizando un ciclo (bucle) con for 
-
-let total = 0;
-alert("suma de productos  ");
-for ( i = 0; i < 5; i++) {
-    let producto = parseFloat(prompt("Ingrese el precio del producto"+ i + ": "));
-    total += producto;
+// Definición de una clase 'Producto'
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
 }
 
-console.log("Total a pagar:", total);
+// Crear un array de productos
+const inventario = [
+    new Producto("Laptop", 1000),
+    new Producto("Teléfono", 500),
+    new Producto("Tablet", 300),
+    new Producto("Auriculares", 100),
+    new Producto("Mouse", 20)
+];
 
-// cuotas 
-alert("Ej de cuotas  ");
-let monto = parseFloat(prompt("Ej 2 Ingrese el monto total: "));        //poner float para n con decimal  :D
-let cuotas = parseInt(prompt("Ej 2 Ingrese la cantidad de cuotas: "));
+// Función para agregar un producto al inventario
+function agregarProducto() {
+    const nombre = prompt("Ingresa el nombre del producto:");
+    const precio = parseFloat(prompt("Ingresa el precio del producto:"));
 
-let pago_por_cuota = monto / cuotas;
-console.log("Pago mensual:", pago_por_cuota);
+    if (isNaN(precio)) {
+        alert("Precio no válido. Introduce un número válido.");
+        return;
+    }
 
-
-// Algoritmo utilizando un ciclo (bucle) con for 
-alert("Ej de buche for  ");
-alert("No ingrese un numero largo o se le cansara la muñeca ");
-let total_turnos = parseInt(prompt("Ej 3 Ingrese la cantidad total de turnos: "));
-let tiempo_total = 0;
-
-for ( i = 0; i < total_turnos; i++) {
-    let tiempo = parseInt(prompt(`Ingrese el tiempo de espera del turno ${i + 1}: `));
-    tiempo_total += tiempo;
+    const nuevoProducto = new Producto(nombre, precio);
+    inventario.push(nuevoProducto);
+    alert(`${nombre} ha sido agregado al inventario.`);
 }
 
-let tiempo_promedio = tiempo_total / total_turnos;
-console.log("Tiempo de espera promedio:", tiempo_promedio);
-
-// Algoritmo utilizando un ciclo (bucle) con while 
-alert("Con while ");
-alert("No ingrese un numero largo o se le cansara la muñeca x2 ");
-let total_personas = parseInt(prompt("Ingrese la cantidad total de personas: "));
-let edades_total = 0;
-let contador = 0;
-
-while (contador < total_personas) {
-    let edad = parseInt(prompt(`Ingrese la edad de la persona ${contador + 1}: `));
-    edades_total += edad;
-    contador++;
+// Función para mostrar todos los productos en el inventario
+function mostrarInventario() {
+    alert("Inventario de productos:");
+    inventario.forEach(producto => {
+        alert(`Nombre: ${producto.nombre}, Precio: $${producto.precio}`);
+    });
 }
 
-let edad_promedio = edades_total / total_personas;
-console.log("Edad promedio:", edad_promedio);
+// Función para filtrar productos por precio
+function filtrarPorPrecio() {
+    const precioLimite = parseFloat(prompt("Ingresa el precio máximo para filtrar productos:"));
 
-// Algoritmo utilizando un ciclo (bucle) con for}
-alert("Ej de notas ");
-let total_alumnos = parseInt(prompt("Ingrese la cantidad total de alumnos: "));
-let notas_total = 0;
+    if (isNaN(precioLimite)) {
+        alert("Precio no válido. Introduce un número válido.");
+        return;
+    }
 
-for ( i = 0; i < total_alumnos; i++) {
-    let nota = parseFloat(prompt(`Ingrese la nota del alumno ${i + 1}: `));
-    notas_total += nota;
+    const productosFiltrados = inventario.filter(producto => producto.precio <= precioLimite);
+
+    alert("Productos con precio igual o inferior al límite:");
+    productosFiltrados.forEach(producto => {
+        alert(`Nombre: ${producto.nombre}, Precio: $${producto.precio}`);
+    });
 }
 
-let nota_final = notas_total / total_alumnos;
-console.log("Nota final promedio:", nota_final);
-alert("Fin <3 ");
+// Función para buscar un producto por nombre
+function buscarProductoPorNombre() {
+    const nombreBuscado = prompt("Ingresa el nombre del producto que deseas buscar:");
+
+    const productoEncontrado = inventario.find(producto => producto.nombre === nombreBuscado);
+
+    if (productoEncontrado) {
+        alert(`Producto encontrado: ${productoEncontrado.nombre}, Precio: $${productoEncontrado.precio}`);
+    } else {
+        alert(`No se encontró ningún producto con el nombre "${nombreBuscado}".`);
+    }
+}
+
+// Función para eliminar un producto del inventario
+function eliminarProducto() {
+    const nombreAEliminar = prompt("Ingresa el nombre del producto que deseas eliminar:");
+
+    const indice = inventario.findIndex(producto => producto.nombre === nombreAEliminar);
+
+    if (indice !== -1) {
+        const productoEliminado = inventario.splice(indice, 1);
+        alert(`${productoEliminado[0].nombre} ha sido eliminado del inventario.`);
+    } else {
+        alert(`No se encontró ningún producto con el nombre "${nombreAEliminar}".`);
+    }
+}
+
+// Ejecutar el programa
+while (true) {
+    const opcion = prompt("Selecciona una opción:\n1. Agregar Producto\n2. Mostrar Inventario\n3. Filtrar por Precio\n4. Buscar Producto por Nombre\n5. Eliminar Producto\n6. Salir");
+
+    switch (opcion) {
+        case "1":
+            agregarProducto();
+            break;
+        case "2":
+            mostrarInventario();
+            break;
+        case "3":
+            filtrarPorPrecio();
+            break;
+        case "4":
+            buscarProductoPorNombre();
+            break;
+        case "5":
+            eliminarProducto();
+            break;
+        case "6":
+            alert("¡Hasta luego!");
+            // Salir del programa
+            window.close();
+            break;
+        default:
+            alert("Opción no válida. Por favor, selecciona una opción válida.");
+    }
+}
