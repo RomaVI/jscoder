@@ -1,0 +1,93 @@
+.cont-buscador {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin-top: 10vh;
+    #buscador {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+        height: 40px;
+
+        border-radius: 10px;
+        background-color: rgba(146, 141, 141, 0.319);
+
+        color: white;
+        text-align: center;
+    }
+    .hijoBuscador {
+        width: 65vw;
+        height: 72vh;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        border-radius: 20px;
+        margin-top: 50px;
+
+        overflow-y: scroll;
+        ol {
+            width: 60vw;
+            padding: 10px 0 10px 0;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            gap: 1.5vh;
+            padding-bottom: 50px;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                min-width: 120px;
+                min-height: 160px;
+                width: 15vh;
+                height: 20vh;
+                
+                img{
+                    width: 15vh;
+                    height: 20vh;
+                }
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    margin-top: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.filtro{
+    display: none;
+}

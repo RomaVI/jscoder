@@ -20,9 +20,12 @@
             margin-top: 0vh;
             width: 50vw;
             height: 10vh;
-            font-family: 'Fuggles', cursive;
-            font-size:12vh;
-            text-shadow: 0 0 20px $black, 0 0 10px $black, 0 0 30px $black;
+            font-family: "Fuggles", cursive;
+            font-size: 12vh;
+            text-shadow:
+                0 0 20px $black,
+                0 0 10px $black,
+                0 0 30px $black;
         }
     }
     .cont-main {
@@ -30,16 +33,17 @@
         flex-direction: column;
         padding-left: 50px;
         padding-right: 50px;
-        .text-top7{
+        .text-top7 {
             display: flex;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-shadow:  0px 0px 5px black, 0px 0px 5px aquamarine;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            text-shadow:
+                0px 0px 5px black,
+                0px 0px 5px aquamarine;
             margin-top: -20vh;
             text-decoration: underline;
             font-size: 3vh;
         }
         .block-top7 {
-            
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
@@ -64,30 +68,25 @@
                 display: flex;
                 justify-content: end;
                 overflow: hidden;
-                box-shadow: 5px 10px 10px black ;
-                
-                .corazon{
+                box-shadow: 5px 10px 10px black;
+
+                .corazon {
                     position: absolute;
                     color: rgb(0, 255, 13); /* Cambia el color a rojo en hover */
                     font-size: 3vh;
                     width: 2.3vw;
                     transition: 1s ease-in-out;
                 }
-                
-                .noMeGusta{
+
+                .noMeGusta {
                     position: absolute;
                     margin-top: 70px;
                     color: red; /* Cambia el color a rojo en hover */
                     font-size: 4vh;
                     width: 2.3vw;
                     transition: 1s ease-in-out;
-                    
-                   
                 }
-                
             }
-            
         }
     }
 }
-

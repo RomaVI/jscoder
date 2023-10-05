@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Buscador</title>
+    <link rel="stylesheet" media="(prefers-color-sheme: light)" href="css/dark.css">
+    <link rel="stylesheet" media="(prefers-color-sheme: dark)" href="css/light.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id="theme-stylesheet" rel="stylesheet" href="main-light.css">
+    <title>El Rincón</title>
 </head>
-<body>
-    
+
+<body class="black">
+    <!--El archivo scss no esta en gitignore para que sea mas facil de examinar-->
+    <!--Todabia no funciona con media@ por ahora  -->
+    <div class="cont-head">
+        <header>
+            <div class="head-text">
+                <h1>
+                    Index
+                </h1>
+            </div>
+            <div class="head-boton">
+                <ul class="boton">
+                    <li class="boton1" id="light-theme-btn"></li>
+                    <li class="boton2" id="dark-theme-btn"></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div class="cont-block-iz">
+        <ul class="iz-ul">
+            <li>Buscador</li>
+            <li>Biblioteca</li>
+            <li>Favoritos</li>
+            <li>Contacto</li>
+        </ul>
+        <div class="cerrar"><i class="fa-solid fa-arrows-down-to-line"></i></div>
+    </div>
+    <main class="cont-buscador">
+        <div class="buscador">
+            <input type="text" name="buscador" id="buscador" placeholder="Dime" >
+        </div>
+        <div class="hijoBuscador">
+            <ol class="ulBuscador" id="listaLibros">
+            </ol>
+        </div>
+    </main>
+    <script src="/js/MenuyTema.js"></script>
+    <script src="/js/libros.js"></script>
+    <script src="/js/busqueda.js"></script>
+    <!--<script src="./js/main.js""> </script> esta la entrega 2-->
 </body>
+
 </html>

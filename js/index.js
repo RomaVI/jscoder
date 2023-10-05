@@ -77,6 +77,7 @@ function mostrarLibrosEnHTML() {
 
   // Mostrar solo los 7 primeros libros inicialmente
   actualizarHTML(listaOrdenada.slice(0, 7));
+  console.log('HTML completo:', document.documentElement.outerHTML);
 }
 
 mostrarLibrosEnHTML(); // Llama a esta función para inicializar la página
